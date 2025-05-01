@@ -5,7 +5,7 @@ async function askOpenAI() {
 
   try {
     const response = await axios.post('https://api.openai.com/v1/chat/completions', {
-      model: 'gpt-3.5-turbo',
+      model: 'gpt-3.5-turbo-0125',
       messages: [
         { role: 'system', content: 'Responda somente questões relacionadas ao ensino de inglês.' },
         { role: 'user', content: prompt }
