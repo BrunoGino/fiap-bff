@@ -28,7 +28,7 @@ jobs:
       - name: Verificar se o serviço está rodando
         run: |
           for i in {1..10}; do
-            if curl -sSf https://fiap-bff.onrender.com/health; then
+            if curl -sSf ${{ vars.HEALTH_URL }}; then
               echo "Serviço está rodando!"
               exit 0
             fi
