@@ -18,8 +18,8 @@ jobs:
 
       - run: npm ci
 
-      - name: Testes (se houver)
-        run: echo "Adicionar testes futuramente"
+      - name: Unit tests
+        run: npm run test
 
       - name: Deploy via Render
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
