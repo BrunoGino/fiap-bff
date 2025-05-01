@@ -1,13 +1,13 @@
 const axios = require('axios');
 
 async function askOpenAI() {
-  const prompt = `Elabore 5 palavras distintas e seus respectivos significados e um exemplo de uso. Retorne um JSON no formato [{word, description, useCase}]. Não adicione quebras de linhas.`;
+  const prompt = `Elabore 5 pequenos tópicos de curiosidades sobre em formato de notícias sobre Jaspion e coisas relacionadas além da série. Retorne um JSON no formato [{topic, description}]. Não adicione quebras de linhas.`;
 
   try {
     const response = await axios.post('https://api.openai.com/v1/chat/completions', {
       model: 'gpt-3.5-turbo-0125',
       messages: [
-        { role: 'system', content: 'Responda somente questões relacionadas ao ensino de inglês.' },
+        { role: 'system', content: 'Responda somente questões relacionadas ao Jaspion.' },
         { role: 'user', content: prompt }
       ]
     }, {
