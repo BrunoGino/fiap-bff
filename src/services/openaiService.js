@@ -2,7 +2,7 @@ const axios = require('axios');
 
 async function askOpenAI() {
   const prompt = `
-  Elabore 5 pequenos tópicos de curiosidades sobre em formato de notícias sobre Jaspion 
+  Elabore 6 pequenos tópicos de curiosidades sobre em formato de notícias sobre Jaspion 
   e coisas relacionadas além da série, em formato de apresentação para um blog de noticias e curiosidades, 
   com titulo interessante e chamativo pra cada topico, 
   um slug único que vai ser usado no path entao coloque o titulo minusculo separado por hifen,
